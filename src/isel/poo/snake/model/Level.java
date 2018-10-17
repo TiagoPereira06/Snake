@@ -5,23 +5,16 @@ import isel.poo.snake.ctrl.Snake;
 
 public class Level {
 
-    public void setLevelHeigth(int levelHeigth) {
-        this.levelHeigth = levelHeigth;
+
+    private int height, width;
+
+    public void setHeight(int height) {
+        this.height = height;
     }
 
-    public void setLevelWidth(int levelWidth) {
-        this.levelWidth = levelWidth;
+    public void setWidth(int width) {
+        this.width = width;
     }
-
-    public int getLevelHeigth() {
-        return levelHeigth;
-    }
-
-    public int getLevelWidth() {
-        return levelWidth;
-    }
-
-    private int levelHeigth, levelWidth;
 
     public Level(int levelNumber, int height, int width) {
 
