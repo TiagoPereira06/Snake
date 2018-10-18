@@ -1,10 +1,14 @@
 package isel.poo.snake.view;
 
-public class StatusPanel {
-    public static final int WIDTH = 0;
+import isel.leic.pg.Console;
+import isel.poo.console.FieldView;
+import isel.poo.console.View;
+
+public class StatusPanel extends View {
+    public static final int HEIGHT=0,WIDTH = 0;
 
     public StatusPanel(int winWidth) {
-        //TODO
+
     }
 
 

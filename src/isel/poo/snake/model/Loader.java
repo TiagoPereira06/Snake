@@ -57,10 +57,10 @@ public class Loader {
                 error("Wrong number of cells in line");
             for(int c = 0; c<line.length() ; c++) {
                 char type = line.charAt(c);
-                if (type!=' ') {
+                //if (type!=' ') {
                     Cell cell = createCell(type);
                     model.putCell(l, c, cell);           // Add cell to the model
-                }
+                //}
             }
         }
     }

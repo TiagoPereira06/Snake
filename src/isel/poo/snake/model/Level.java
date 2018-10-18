@@ -6,7 +6,8 @@ import isel.poo.snake.ctrl.Snake;
 public class Level {
 
 
-    private int height, width;
+    private int height, width, levelNumber;
+    private Cell[][] board;
 
     public void setHeight(int height) {
         this.height = height;
@@ -16,26 +17,31 @@ public class Level {
         this.width = width;
     }
 
-    public Level(int levelNumber, int height, int width) {
+    public void setLevelNumber(int levelNumber) {
+        this.levelNumber = levelNumber;
+    }
 
+    public Level(int levelNumber, int height, int width) {
+        board = new Cell[height][width];
+        setHeight(height);
+        setWidth(width);
+        setLevelNumber(levelNumber);
     }
 
     public int getHeight() {
-        //TODO
-        return 0;
+        return height;
     }
 
     public int getWidth() {
-        //TODO
-        return 0;
+        return height;
     }
 
     public void init(Game game) {
-        //TODO
+
     }
 
     public void putCell(int l, int c, Cell cell) {
-        //TODO
+        board[l][c]=cell;
     }
 
     public boolean snakeIsDead() {
@@ -49,8 +55,7 @@ public class Level {
     }
 
     public int getNumber() {
-        //TODO
-        return 0;
+        return levelNumber;
     }
 
     public int getRemainingApples() {
@@ -59,8 +64,7 @@ public class Level {
     }
 
     public Object getCell(int l, int c) {
-        //TODO
-        return null;
+        return board[l][c];
     }
 
     public void setObserver(Observer updater) {

@@ -12,6 +12,7 @@ public class Game {
     private Level curLevel = null;
     private Listener listener = null;
 
+
     void addScore(int points) {
         score += points;
         if (listener!=null) listener.scoreUpdated(score);
