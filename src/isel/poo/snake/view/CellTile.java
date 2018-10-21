@@ -9,7 +9,7 @@ public class CellTile extends Tile {
 
     public static Tile tileOf(Object cell) {
 
-        if(cell instanceof EmptyCell)
+        if(cell == null)
             return new EmptyTile();
 
         if(cell instanceof ObstacleCell)
