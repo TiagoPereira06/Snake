@@ -23,6 +23,13 @@ public class Level {
 
     public Level(int levelNumber, int height, int width) {
         board = new Cell[height][width];
+        //TODO:
+        for (int i = 0; i <height ; i++) {
+            for (int j = 0; j <width ; j++) {
+                board[i][j] = new EmptyCell();
+            }
+
+        }
         setHeight(height);
         setWidth(width);
         setLevelNumber(levelNumber);
@@ -37,6 +44,7 @@ public class Level {
     }
 
     public void init(Game game) {
+
 
     }
 
@@ -63,7 +71,7 @@ public class Level {
         return 0;
     }
 
-    public Object getCell(int l, int c) {
+    public Cell getCell(int l, int c) {
         return board[l][c];
     }
 
