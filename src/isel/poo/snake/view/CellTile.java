@@ -6,28 +6,23 @@ import isel.poo.snake.model.*;
 
 public class CellTile extends Tile {
     //TODO:
-
+    public int color;
+    public char character;
     public static final int SIDE = 1;
-/*
-    private final Cell cell;
 
-
-    public CellTile() {
-        this(null);
-    }
-
-    public CellTile(Cell cell) {
-        this.cell = cell;
-        setSize(1, 1);
+    public CellTile(int color, char c) {
+        this.color=color;
+        this.character=c;
     }
 
     @Override
     public void paint() {
         super.paint();
-        if (cell instanceof EmptyCell) printEmptyTile();
-       else printElementTile();
+        Console.setBackground(this.color);
+        Console.setForeground(Console.BLACK);
+        print(0,0,this.character);
     }
-
+/*
     private void printElementTile() {
 
         char elementSymbol = '@';
@@ -47,9 +42,6 @@ public class CellTile extends Tile {
 
     public static Tile tileOf(Object cell) {
 
-        if(cell instanceof EmptyCell)
-            return new EmptyTile();
-
         if(cell instanceof ObstacleCell)
             return new ObstacleTile();
 
@@ -59,7 +51,7 @@ public class CellTile extends Tile {
         if(cell instanceof AppleCell)
             return new AppleTile();
 
-        return null;
+        return new EmptyTile();
     }
 
 }
