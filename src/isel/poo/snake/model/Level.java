@@ -23,13 +23,7 @@ public class Level {
 
     public Level(int levelNumber, int height, int width) {
         board = new Cell[height][width];
-        //TODO:
-        for (int i = 0; i <height ; i++) {
-            for (int j = 0; j <width ; j++) {
-                board[i][j] = new EmptyCell();
-            }
-
-        }
+        filEmptyCells(board);
         setHeight(height);
         setWidth(width);
         setLevelNumber(levelNumber);
@@ -88,9 +82,9 @@ public class Level {
     }
 
     public interface Observer {
+
         // Level.Listener
         void cellUpdated(int l, int c, isel.poo.snake.model.Cell cell);
-
         void cellCreated(int l, int c, isel.poo.snake.model.Cell cell);
 
         void cellRemoved(int l, int c);
@@ -98,6 +92,14 @@ public class Level {
         void cellMoved(int fromL, int fromC, int toL, int toC, isel.poo.snake.model.Cell cell);
 
         void applesUpdated(int apples);
+
         //TODO
+    }
+    private void filEmptyCells(Cell[][] board) {
+        for (int i = 0; i <height ; i++) {
+            for (int j = 0; j <width ; j++) {
+                board[i][j] = new EmptyCell();
+            }
+        }
     }
 }

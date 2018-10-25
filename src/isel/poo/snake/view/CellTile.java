@@ -6,8 +6,8 @@ import isel.poo.snake.model.*;
 
 public class CellTile extends Tile {
     //TODO:
-    public int color;
-    public char character;
+    private int color;
+    private char character;
     public static final int SIDE = 1;
 
     public CellTile(int color, char c) {

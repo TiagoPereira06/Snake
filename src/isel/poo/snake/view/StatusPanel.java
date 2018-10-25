@@ -6,6 +6,10 @@ import isel.poo.console.View;
 
 public class StatusPanel extends View {
     public static final int HEIGHT=0,WIDTH = 0;
+    public int apples;
+    public int score;
+    public int level;
+
 
     public StatusPanel(int winWidth) {
 
@@ -13,14 +17,14 @@ public class StatusPanel extends View {
 
 
     public void setApples(int apples) {
-        //TODO
+        this.apples=apples;
     }
 
     public void setScore(int score) {
-        //TODO
+        this.score=score;
     }
 
     public void setLevel(int number) {
-        //TODO
+        this.level=level;
     }
 }
