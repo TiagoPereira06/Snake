@@ -1,13 +1,12 @@
 package isel.poo.snake.model;
 
-import isel.poo.snake.ctrl.Snake;
-
 
 public class Level {
 
 
-    private int height, width, levelNumber;
+    private int height, width, levelNumber,remApples;
     private Cell[][] board;
+    private Dir currentSnakeDirection;
 
     public void setHeight(int height) {
         this.height = height;
@@ -23,7 +22,7 @@ public class Level {
 
     public Level(int levelNumber, int height, int width) {
         board = new Cell[height][width];
-        filEmptyCells(board);
+        fillEmptyCells(board);
         setHeight(height);
         setWidth(width);
         setLevelNumber(levelNumber);
@@ -52,8 +51,7 @@ public class Level {
     }
 
     public boolean isFinished() {
-        //TODO
-        return false;
+        return remApples==0;
     }
 
     public int getNumber() {
@@ -61,8 +59,13 @@ public class Level {
     }
 
     public int getRemainingApples() {
-        //TODO
-        return 0;
+        for (int i = 0; i <height ; i++) {
+            for (int j = 0; j < width; j++) {
+                if (board[i][j] instanceof AppleCell)
+                    ++remApples;
+            }
+        }
+        return remApples;
     }
 
     public Cell getCell(int l, int c) {
@@ -74,11 +77,17 @@ public class Level {
     }
 
     public void setSnakeDirection(Dir dir) {
-        //TODO
+        currentSnakeDirection=dir;
     }
 
     public void step() {
-        //TODO
+        move(currentSnakeDirection);
+
+    }
+
+    private void move(Dir dir) {
+        //TODO:
+        if(dir==Dir.UP){}
     }
 
     public interface Observer {
@@ -95,7 +104,7 @@ public class Level {
 
         //TODO
     }
-    private void filEmptyCells(Cell[][] board) {
+    private void fillEmptyCells(Cell[][] board) {
         for (int i = 0; i <height ; i++) {
             for (int j = 0; j <width ; j++) {
                 board[i][j] = new EmptyCell();
