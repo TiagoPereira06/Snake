@@ -41,6 +41,19 @@ public class Game {
 
     public int getScore() { return score; }
 
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public int getLevelNumber() {
+        return levelNumber;
+    }
+
+    public void setLevelNumber(int levelNumber) {
+        this.levelNumber = levelNumber;
+    }
+
+
     public interface Listener {
         void scoreUpdated(int score);
     }
