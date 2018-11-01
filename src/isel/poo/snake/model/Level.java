@@ -15,6 +15,8 @@ public class Level {
     private SnakeHeadCell snakeHead;
     private Observer update;
 
+
+
     public void setHeight(int height) {
         this.height = height;
     }
@@ -46,7 +48,7 @@ public class Level {
 
     public void init(Game game) {
         //TODO:
-        snake.add((SnakeBodyCell) board[inicialX][inicialY]);
+        snake.add((SnakeBodyCell) board[inicialX][inicialY]); //ADICIONAR CABEÇA LINKEDLIST
         currentGame=game;
         game.setScore(0);
         game.setLevelNumber(levelNumber);
@@ -101,12 +103,11 @@ public class Level {
     }
 
     public void step() {
-        fillEmptyCells(board);
         ++stepCounter;
         move(currentSnakeDirection);
         if(stepCounter<=4){
             snake.add(stepCounter,new SnakeBodyCell(inicialX,inicialY));
-            update.cellUpdated(inicialX,inicialY,snake.get(stepCounter));
+            update.cellCreated(inicialX,inicialY,snake.get(stepCounter));
             board[inicialX][inicialY] = snake.get(stepCounter);
         }
 
@@ -119,19 +120,21 @@ public class Level {
         //TODO:
         ++moves;
         if(dir==Dir.UP){
+            snake.get(0).setCord(cu);
             for (int i = 0; i<snake.size() ; i++) {
                 moveCell(snake.get(i).getX(),snake.get(i).getY()-1,snake.get(i));
+
+
 
             }
         }
     }
     private void moveCell(int x,int y, SnakeBodyCell cell){
-        EmptyCell a = new EmptyCell();
-        board[cell.getX()][cell.getY()] = a;
-        update.cellUpdated(cell.getX(),cell.getY(),a);
+        board[cell.getX()][cell.getY()] = new EmptyCell();
         cell.setCord(x,y);
         board[x][y] = cell;
-        update.cellUpdated(x,y,cell);
+        update.cellMoved(cell.getX(),cell.getY(),x,y,cell);
+
 
 
     }
