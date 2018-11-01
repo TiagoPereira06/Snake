@@ -51,6 +51,9 @@ public class CellTile extends Tile {
         if(cell instanceof AppleCell)
             return new AppleTile();
 
+        if(cell instanceof SnakeBodyCell)
+            return new SnakeBodyTile();
+
         return new EmptyTile();
     }
 

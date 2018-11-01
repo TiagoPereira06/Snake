@@ -4,18 +4,10 @@ public class Cell {
 
 
     public static Cell newInstance(char type) {
-        switch (type) {
-            case ' ':
-                return new EmptyCell();
-            case 'X':
-                return new ObstacleCell();
-            case '@':
-                return new SnakeHeadCell();
-            case 'A':
-                return new AppleCell();
-
-        }
-        return null;
+        if (type =='X' ) return new ObstacleCell();
+        if (type == '@' ) return  new SnakeHeadCell();
+        if (type == 'A' ) return  new AppleCell();
+        return  new EmptyCell();
 
     }
 }

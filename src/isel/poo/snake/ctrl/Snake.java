@@ -104,7 +104,17 @@ public class Snake {
         @Override
         public void cellUpdated(int l, int c, Cell cell) { view.getTile(l,c).repaint(); }
         @Override
-        public void cellCreated(int l, int c, Cell cell) { view.setTile(l,c,CellTile.tileOf(cell)); }
+        public void cellCreated(int l, int c, Cell cell) {
+            view.setTile(l,c,CellTile.tileOf(cell));
+
+            for (int i = 0; i <15 ; i++) {
+                for (int j = 0; j <15 ; j++) {
+                    System.out.println(view.getTile(i,j));
+
+                }
+                System.out.println("L=" +i);
+            }
+        }
         @Override
         public void cellRemoved(int l, int c) { view.setTile(l,c,new EmptyTile()); }
         @Override
