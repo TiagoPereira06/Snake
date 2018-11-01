@@ -134,11 +134,7 @@ public class Level {
         lin = lineSnake;
         col = colSnake;
         for (int i = 1; i < snake.size(); i++) {
-            if (i > 1) {
-                lin = snake.get(i).getLine();
-                col = snake.get(i).getLine();
-            }
-            moveCell(col, lin, snake.get(i));
+            if(i==1)moveCell(col, lin, snake.get(i));
         }
         //moveCell(colSnake,lineSnake,snake.get(snake.size()-1));
 
