@@ -107,14 +107,14 @@ public class Level {
         ++stepCounter;
         moveHead(currentSnakeDirection);
         if (stepCounter > 1)
-            move();
+            moveBody();
         if(stepCounter <= 4){
             snake.add(stepCounter,new SnakeBodyCell(inicialLine, inicialCol));
             update.cellCreated(inicialLine, inicialCol,snake.get(stepCounter));
             board[inicialLine][inicialCol] = snake.get(stepCounter);
         }
         if (stepCounter>4)
-            System.out.println("fds");
+            System.out.println("STEPCOUNTER > "+ stepCounter);
     }
 
     private void moveHead(Dir dir) {
@@ -129,12 +129,17 @@ public class Level {
         }
     }
 
-    private void move() {
-        int lin, col;
+    private void moveBody() {
+        int lin, col,i=1,lastLine,lastCol;
         lin = lineSnake;
         col = colSnake;
-        for (int i = 1; i < snake.size(); i++) {
-            if(i==1)moveCell(col, lin, snake.get(i));
+        lastLine=snake.get(i).getLine();
+        lastCol=snake.get(i).getCol();
+        for (; i < snake.size(); i++) {
+            if(i==1)
+            moveCell(col, lin, snake.get(i));
+            else
+            moveCell(lastLine,lastCol,snake.get(i));
         }
         //moveCell(colSnake,lineSnake,snake.get(snake.size()-1));
 
