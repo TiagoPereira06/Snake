@@ -137,9 +137,9 @@ public class Level {
         lastCol=snake.get(i).getCol();
         for (; i < snake.size(); i++) {
             if(i==1)
-            moveCell(col, lin, snake.get(i));
+                moveCell(col, lin, snake.get(i));
             else
-            moveCell(lastLine,lastCol,snake.get(i));
+                moveCell(lastLine,lastCol,snake.get(i));
         }
         //moveCell(colSnake,lineSnake,snake.get(snake.size()-1));
 
