@@ -150,6 +150,7 @@ public class Level {
                 snakeDead = true;
                 return false;
             }
+
         }
         if (dir == DOWN) {
             if (board[currentSnakeHeadLine + 1][currentSnakeHeadCol] instanceof ObstacleCell) {
