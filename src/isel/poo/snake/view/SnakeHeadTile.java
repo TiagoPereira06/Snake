@@ -8,5 +8,6 @@ public class SnakeHeadTile extends CellTile {
 
     public SnakeHeadTile() {
         super(Console.YELLOW, '@');
+
     }
 }

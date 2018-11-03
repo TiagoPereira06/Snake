@@ -4,17 +4,20 @@ package isel.poo.snake.model;
 import java.util.LinkedList;
 import java.util.List;
 
+import static isel.poo.snake.model.Dir.*;
+
 public class Level {
 
 
     private int height, width, levelNumber, remApples = 10, moves, inicialLine, inicialCol, stepCounter;
     private Game currentGame;
     private Cell[][] board;
-    private Dir currentSnakeDirection = Dir.UP;
+    private Dir currentSnakeDirection = UP;
     private List<SnakeBodyCell> snake;
     private SnakeHeadCell snakeHead;
     private Observer update;
-    private int lineSnake, colSnake;
+    private int lineSnake, colSnake; //Current Cord SnakeHead
+    private boolean snakeDead = false;
 
     Level(int levelNumber, int height, int width) {
         board = new Cell[height][width];
@@ -77,8 +80,7 @@ public class Level {
     }
 
     public boolean snakeIsDead() {
-        //TODO
-        return false;
+        return snakeDead;
     }
 
     public boolean isFinished() {
@@ -90,12 +92,6 @@ public class Level {
     }
 
     public int getRemainingApples() {
-/*        for (int i = 0; i <height ; i++) {
-            for (int j = 0; j < width; j++) {
-                if (board[i][j] instanceof AppleCell)
-                    ++remApples;
-            }
-        }*/
         return remApples;
     }
 
@@ -110,38 +106,80 @@ public class Level {
 
     public void step() {
         ++stepCounter;
-        moveHead(currentSnakeDirection);
-        if (stepCounter > 1)
-            moveBody();
-        if (stepCounter <= 4) {
-            snake.add(stepCounter, new SnakeBodyCell(inicialLine, inicialCol));
-            update.cellCreated(inicialLine, inicialCol, snake.get(stepCounter));
-            putCell(inicialLine, inicialCol, snake.get(stepCounter));
-        }
+        lineSnake = snakeHead.getLine();
+        colSnake = snakeHead.getCol();
+        if (safeToMove(lineSnake, colSnake, currentSnakeDirection)) {
+            moveHead(currentSnakeDirection);
+            if (stepCounter > 1)
+                moveBody();
+            if (stepCounter <= 4) {
+                snake.add(stepCounter, new SnakeBodyCell(inicialLine, inicialCol));
+                update.cellCreated(inicialLine, inicialCol, snake.get(stepCounter));
+                putCell(inicialLine, inicialCol, snake.get(stepCounter));
+            }
+        }else return;
     }
-
     private void moveHead(Dir dir) {
         //TODO: verificar se a direção para onde é pretendido ir está um obstáculo/maçã/cobra
         ++moves;
-        lineSnake = snakeHead.getLine();
-        colSnake = snakeHead.getCol();
-        if (dir == Dir.UP) {
-            update.cellMoved(lineSnake, colSnake, lineSnake - 1, colSnake, snakeHead);
-            putCell(lineSnake - 1, colSnake, snakeHead);
-            snakeHead.setCord(lineSnake - 1, colSnake);
-        } else if (dir == Dir.DOWN) {
-            update.cellMoved(lineSnake, colSnake, lineSnake + 1, colSnake, snakeHead);
-            putCell(lineSnake + 1, colSnake, snakeHead);
-            snakeHead.setCord(lineSnake + 1, colSnake);
-        } else if (dir == Dir.LEFT) {
-            update.cellMoved(lineSnake, colSnake, lineSnake, colSnake - 1, snakeHead);
-            putCell(lineSnake, colSnake - 1, snakeHead);
-            snakeHead.setCord(lineSnake, colSnake - 1);
-        } else {
-            update.cellMoved(lineSnake, colSnake, lineSnake, colSnake + 1, snakeHead);
-            putCell(lineSnake, colSnake + 1, snakeHead);
-            snakeHead.setCord(lineSnake, colSnake + 1);
+            if (dir == UP) {
+                update.cellMoved(lineSnake, colSnake, lineSnake - 1, colSnake, snakeHead);
+                putCell(lineSnake - 1, colSnake, snakeHead);
+                snakeHead.setCord(lineSnake - 1, colSnake);
+            } else if (dir == Dir.DOWN) {
+                update.cellMoved(lineSnake, colSnake, lineSnake + 1, colSnake, snakeHead);
+                putCell(lineSnake + 1, colSnake, snakeHead);
+                snakeHead.setCord(lineSnake + 1, colSnake);
+            } else if (dir == Dir.LEFT) {
+                update.cellMoved(lineSnake, colSnake, lineSnake, colSnake - 1, snakeHead);
+                putCell(lineSnake, colSnake - 1, snakeHead);
+                snakeHead.setCord(lineSnake, colSnake - 1);
+            } else {
+                update.cellMoved(lineSnake, colSnake, lineSnake, colSnake + 1, snakeHead);
+                putCell(lineSnake, colSnake + 1, snakeHead);
+                snakeHead.setCord(lineSnake, colSnake + 1);
+            }
         }
+
+    private boolean safeToMove(int currentSnakeHeadLine, int currentSnakeHeadCol, Dir dir) {
+        if (dir == UP) {
+            if (board[currentSnakeHeadLine - 1][currentSnakeHeadCol] instanceof ObstacleCell) {
+                DeadSnakeHeadCell dead = new DeadSnakeHeadCell(currentSnakeHeadLine, currentSnakeHeadCol);
+                update.cellUpdated(currentSnakeHeadLine, currentSnakeHeadCol, dead);
+                board[currentSnakeHeadLine][currentSnakeHeadCol] = dead;
+                snakeDead = true;
+                return false;
+            }
+        }
+        if (dir == DOWN) {
+            if (board[currentSnakeHeadLine + 1][currentSnakeHeadCol] instanceof ObstacleCell) {
+                DeadSnakeHeadCell dead = new DeadSnakeHeadCell(currentSnakeHeadLine, currentSnakeHeadCol);
+                update.cellUpdated(currentSnakeHeadLine, currentSnakeHeadCol, dead);
+                board[currentSnakeHeadLine][currentSnakeHeadCol] = dead;
+                snakeDead = true;
+                return false;
+            }
+        }
+        if (dir == LEFT) {
+            if (board[currentSnakeHeadLine][currentSnakeHeadCol - 1] instanceof ObstacleCell) {
+                DeadSnakeHeadCell dead = new DeadSnakeHeadCell(currentSnakeHeadLine, currentSnakeHeadCol);
+                update.cellUpdated(currentSnakeHeadLine, currentSnakeHeadCol, dead);
+                board[currentSnakeHeadLine][currentSnakeHeadCol] = dead;
+                snakeDead = true;
+                return false;
+            }
+        }
+        if (dir == RIGHT) {
+            if (board[currentSnakeHeadLine][currentSnakeHeadCol + 1] instanceof ObstacleCell) {
+                DeadSnakeHeadCell dead = new DeadSnakeHeadCell(currentSnakeHeadLine, currentSnakeHeadCol);
+                update.cellUpdated(currentSnakeHeadLine, currentSnakeHeadCol, dead);
+                board[currentSnakeHeadLine][currentSnakeHeadCol] = dead;
+                snakeDead = true;
+                return false;
+            }
+        }
+        System.out.println(snakeDead);
+        return true;
     }
 
     private void moveBody() {

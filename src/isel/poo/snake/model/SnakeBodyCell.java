@@ -8,8 +8,8 @@ public class SnakeBodyCell extends Cell {
     }
 
     SnakeBodyCell() {
-    }
 
+    }
 
     int getLine() {
         return line;

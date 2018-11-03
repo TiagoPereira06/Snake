@@ -22,23 +22,7 @@ public class CellTile extends Tile {
         Console.setForeground(Console.BLACK);
         print(0,0,this.character);
     }
-/*
-    private void printElementTile() {
 
-        char elementSymbol = '@';
-        int color = Console.BLACK;
-        if (cell instanceof Robot)
-            elementSymbol = '+';
-        else if (cell instanceof JunkPile)
-            elementSymbol = '*';
-
-        Console.setBackground(color);
-        print(0, 0, elementSymbol);
-    }
-    private void printEmptyTile() {
-        print(0, 0, ' ');
-    }
-*/
 
     public static Tile tileOf(Object cell) {
 
@@ -53,6 +37,9 @@ public class CellTile extends Tile {
 
         if(cell instanceof SnakeBodyCell)
             return new SnakeBodyTile();
+
+        if(cell instanceof DeadSnakeHeadCell)
+            return new DeadSnakeHeadTile();
 
         return new EmptyTile();
     }
