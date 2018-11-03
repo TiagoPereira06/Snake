@@ -3,26 +3,24 @@ package isel.poo.snake.model;
 public class SnakeBodyCell extends Cell {
     private int line, col;
 
-    public SnakeBodyCell(int x, int y){
-        this.line = x;
-        this.col = y;
+    SnakeBodyCell(int line, int col) {
+        setCord(line, col);
     }
 
-    public SnakeBodyCell(){
+    SnakeBodyCell() {
     }
 
 
-    public int getLine() {
+    int getLine() {
         return line;
     }
 
-    public void setCord(int x,int y) {
-        col = y;
-        line = x;
+    void setCord(int line, int col) {
+        this.col = col;
+        this.line = line;
     }
 
-    public int getCol() {
+    int getCol() {
         return col;
     }
 }
-
