@@ -142,7 +142,14 @@ public class Snake {
             }
             if (dir!=null) level.setSnakeDirection(dir);
         }
-        if (!paused) level.step();
+        if (!paused){level.step();
+        updateStatus();
+        }
+    }
+
+    private void updateStatus() {
+        status.setApples(level.getRemainingApples());
+        status.setScore(model.getScore());
     }
 
     private int lastKey = Console.NO_KEY;  // Only used by getKeyPressed to store lastKey
