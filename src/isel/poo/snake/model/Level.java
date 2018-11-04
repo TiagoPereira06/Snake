@@ -9,7 +9,7 @@ import static isel.poo.snake.model.Dir.*;
 public class Level {
 
 
-    private int height, width, levelNumber, remApples = 10, moves, inicialLine, inicialCol, stepCounter,score=0,sectionsAdded,lastScoreStepCounter;
+    private int height, width, levelNumber, remApples, moves, inicialLine, inicialCol, stepCounter,score=0,sectionsAdded,lastScoreStepCounter, inicialAppleCount;
     private Game currentGame;
     private Cell[][] board;
     private Dir currentSnakeDirection = UP;
@@ -26,6 +26,7 @@ public class Level {
         setHeight(height);
         setWidth(width);
         setLevelNumber(levelNumber);
+        remApples=10;
     }
 
     private void setLevelNumber(int levelNumber) {
@@ -55,6 +56,7 @@ public class Level {
         currentGame.setScore(score);
         currentGame.setLevelNumber(levelNumber);
         moves = 0;
+
     }
 
     private void findHead() {
@@ -72,6 +74,7 @@ public class Level {
     }
 
     void putCell(int l, int c, Cell cell) {
+        if(cell instanceof AppleCell)++inicialAppleCount;
         board[l][c] = cell;
     }
 
@@ -262,11 +265,12 @@ public class Level {
     }
 
     private void updateRoutineAfterScore() {
-        if(remApples>4)genNewApple();
+        if(remApples>inicialAppleCount)genNewApple();
         lastScoreStepCounter=stepCounter;
         updateNumbers();
         addAfterMove=true;
     }
+
 
     private void genNewApple() {
             int l1 = (int) (Math.random() * (getWidth()));
