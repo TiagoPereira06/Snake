@@ -5,7 +5,7 @@ import isel.poo.console.tile.Tile;
 import isel.poo.snake.model.*;
 
 public class CellTile extends Tile {
-    //TODO:
+
     private int color;
     private char character;
     public static final int SIDE = 1;

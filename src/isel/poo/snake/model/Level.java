@@ -121,18 +121,18 @@ public class Level {
                     putCell(inicialLine, inicialCol, snake.get(stepCounter));
                 }
             } else return;
-
+/*
             System.out.println("SNAKE DEAD - " + snakeDead);
             System.out.println("REM APPLES - " + remApples);
             System.out.println("SCORE - " + score);
             System.out.println("ADD AFTER MOVE - " + addAfterMove);
-            System.out.println("SECTION ADDED - " + sectionsAdded);
+            System.out.println("SECTION ADDED - " + sectionsAdded);*/
             if (sectionsAdded >= 4) addAfterMove = false;
         }
 
 
     private void moveHead(Dir dir) {
-        //TODO: verificar se a direção para onde é pretendido ir está um obstáculo/maçã/cobra
+        //TODO: Teletransporte
         ++moves;
             if (dir == UP) {
                 if(board[lineSnake-1][colSnake] instanceof AppleCell){
@@ -185,27 +185,25 @@ public class Level {
 
     private boolean safeToMove(int currentSnakeHeadLine, int currentSnakeHeadCol, Dir dir) {
         if (dir == UP) {
-            if (board[currentSnakeHeadLine - 1][currentSnakeHeadCol] instanceof ObstacleCell) {
+            if ((getCell(currentSnakeHeadLine - 1,currentSnakeHeadCol)instanceof ObstacleCell)||(getCell(currentSnakeHeadLine-1,currentSnakeHeadCol) instanceof SnakeBodyCell)) {
                 deadSnake(currentSnakeHeadLine,currentSnakeHeadCol);
                 return false;
             }
-
-
         }
         if (dir == DOWN) {
-            if (board[currentSnakeHeadLine + 1][currentSnakeHeadCol] instanceof ObstacleCell) {
+            if ((getCell(currentSnakeHeadLine + 1,currentSnakeHeadCol)instanceof ObstacleCell)||(getCell(currentSnakeHeadLine+1,currentSnakeHeadCol) instanceof SnakeBodyCell)) {
                 deadSnake(currentSnakeHeadLine,currentSnakeHeadCol);
                 return false;
             }
         }
         if (dir == LEFT) {
-            if (board[currentSnakeHeadLine][currentSnakeHeadCol - 1] instanceof ObstacleCell) {
+            if ((getCell(currentSnakeHeadLine,currentSnakeHeadCol-1)instanceof ObstacleCell)||(getCell(currentSnakeHeadLine,currentSnakeHeadCol-1) instanceof SnakeBodyCell)) {
                 deadSnake(currentSnakeHeadLine,currentSnakeHeadCol);
                 return false;
             }
         }
         if (dir == RIGHT) {
-            if (board[currentSnakeHeadLine][currentSnakeHeadCol + 1] instanceof ObstacleCell) {
+            if ((getCell(currentSnakeHeadLine,currentSnakeHeadCol+1)instanceof ObstacleCell)||(getCell(currentSnakeHeadLine,currentSnakeHeadCol+1) instanceof SnakeBodyCell)) {
                 deadSnake(currentSnakeHeadLine,currentSnakeHeadCol);
                 return false;
             }
@@ -214,8 +212,9 @@ public class Level {
     }
 
     private void deadSnake(int currentSnakeHeadLine, int currentSnakeHeadCol) {
-        DeadSnakeHeadCell dead = new DeadSnakeHeadCell(currentSnakeHeadLine, currentSnakeHeadCol);
-        update.cellUpdated(currentSnakeHeadLine, currentSnakeHeadCol, dead);
+        DeadSnakeHeadCell dead = new DeadSnakeHeadCell();
+        update.cellUpdated(currentSnakeHeadLine, currentSnakeHeadCol,dead);
+        dead.setCord(currentSnakeHeadLine,currentSnakeHeadCol);
         putCell(currentSnakeHeadLine,currentSnakeHeadCol,dead);
         snakeDead = true;
     }
@@ -289,6 +288,7 @@ public class Level {
 
     private void updateNumbers() {
         --remApples;
+        update.applesUpdated(remApples);
         score+=4;
         currentGame.setScore(score);
     }
@@ -302,10 +302,9 @@ public class Level {
 
         void cellRemoved(int l, int c);
 
-        void cellMoved(int fromL, int fromC, int toL, int toC, isel.poo.snake.model.Cell cell);
+        void cellMoved(int fromL, int fromC, int toL, int toC, Cell cell);
 
         void applesUpdated(int apples);
 
-        //TODO
     }
 }

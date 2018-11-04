@@ -148,7 +148,6 @@ public class Snake {
     }
 
     private void updateStatus() {
-        status.setApples(level.getRemainingApples());
         status.setScore(model.getScore());
     }
 
