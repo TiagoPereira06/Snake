@@ -17,12 +17,12 @@ public class Level {
     private SnakeHeadCell snakeHead;
     private Observer update;
     private int lineSnake, colSnake; //Current Cord SnakeHead
-    private boolean snakeDead = false, addAfterMove;
+    private boolean snakeDead = false, addAfterMove, teletranportation;
 
     Level(int levelNumber, int height, int width) {
         board = new Cell[height][width];
         snake = new LinkedList<>();
-        fillEmptyCells(board);//TODO: VER SE HÁ OUTRA MANEIRA DE FAZER ISTO
+        fillEmptyCells(board,true);//TODO: VER SE HÁ OUTRA MANEIRA DE FAZER ISTO
         setHeight(height);
         setWidth(width);
         setLevelNumber(levelNumber);
@@ -108,10 +108,12 @@ public class Level {
     }
 
     public void step() {
+        fillEmptyCells(board,false);
         ++stepCounter;
         losesSection();
             lineSnake = snakeHead.getLine();
             colSnake = snakeHead.getCol();
+            //checkTeletransportation(lineSnake,colSnake,currentSnakeDirection);
             if (safeToMove(lineSnake, colSnake, currentSnakeDirection)) {
                 moveHead(currentSnakeDirection);
                 if (stepCounter > 1 && !addAfterMove) {
@@ -130,27 +132,23 @@ public class Level {
             System.out.println("SCORE - " + score);
             System.out.println("ADD AFTER MOVE - " + addAfterMove);
             System.out.println("SECTION ADDED - " + sectionsAdded);*/
+            System.out.println(stepCounter);
             if (sectionsAdded >= 4) addAfterMove = false;
+
         }
 
 
     private void moveHead(Dir dir) {
-        //TODO: Teletransporte
         ++moves;
-            if (dir == UP) {
-                if(board[lineSnake-1][colSnake] instanceof AppleCell){
-                    updateRoutineAfterScore();
-                }
-                if (lineSnake - 1 == -1) {
-                    update.cellMoved(lineSnake, colSnake,getHeight(), colSnake, snakeHead);
-                    putCell(getHeight(), colSnake, snakeHead);
-                    snakeHead.setCord(getHeight(), colSnake);
-
-                }else{
-                    update.cellMoved(lineSnake, colSnake, lineSnake - 1, colSnake, snakeHead);
-                    putCell(lineSnake - 1, colSnake, snakeHead);
-                    snakeHead.setCord(lineSnake - 1, colSnake);
-                }
+        if (dir == UP) {
+            if (getCell(lineSnake - 1,colSnake) instanceof AppleCell) {
+                updateRoutineAfterScore();
+            }
+         else {
+                update.cellMoved(lineSnake, colSnake, lineSnake - 1, colSnake, snakeHead);
+                putCell(lineSnake - 1, colSnake, snakeHead);
+                snakeHead.setCord(lineSnake - 1, colSnake);
+            }
 
             } else if (dir == Dir.DOWN) {
                 if(board[lineSnake+1][colSnake] instanceof AppleCell){
@@ -188,6 +186,8 @@ public class Level {
 
     private boolean safeToMove(int currentSnakeHeadLine, int currentSnakeHeadCol, Dir dir) {
         if (dir == UP) {
+            if(currentSnakeHeadLine==0 && getCell(getHeight()-1,currentSnakeHeadCol) == null)
+                return true;
             if ((getCell(currentSnakeHeadLine - 1,currentSnakeHeadCol)instanceof ObstacleCell)||(getCell(currentSnakeHeadLine-1,currentSnakeHeadCol) instanceof SnakeBodyCell)) {
                 deadSnake(currentSnakeHeadLine,currentSnakeHeadCol);
                 return false;
@@ -244,13 +244,6 @@ public class Level {
         putCell(lin, col, cell);
     }
 
-    private void fillEmptyCells(Cell[][] board) {
-        for (int i = 0; i < height; i++) {
-            for (int j = 0; j < width; j++) {
-                board[i][j] = new EmptyCell();
-            }
-        }
-    }
     private void losesSection() {
         double test=(double)(stepCounter-lastScoreStepCounter)/10;
         if(test%1==0&&test!=0){
@@ -271,15 +264,14 @@ public class Level {
         addAfterMove=true;
     }
 
-
     private void genNewApple() {
-            int l1 = (int) (Math.random() * (getWidth()));
-            int c1 = (int) (Math.random() * (getHeight()));
+            int l1 = (int) (Math.random() * (getHeight()));
+            int c1 = (int) (Math.random() * (getWidth()));
             AppleCell apple = new AppleCell();
 
             while (!isEmpty(l1,c1)) {
-                l1 = (int) (Math.random() * (getWidth()));
-                c1 = (int) (Math.random() * (getHeight()));
+                l1 = (int) (Math.random() * (getHeight()));
+                c1 = (int) (Math.random() * (getWidth()));
             }
             update.cellCreated(l1,c1,apple);
             board[l1][c1] = apple;
@@ -297,7 +289,33 @@ public class Level {
         currentGame.setScore(score);
     }
 
+    private void checkTeletransportation(int lineSnake, int colSnake, Dir currentSnakeDirection) {
+        if (lineSnake == 0) {
+            update.cellMoved(lineSnake, colSnake, getHeight() - 1, colSnake, snakeHead);
+            putCell(getHeight() - 1, colSnake, snakeHead);
+            snakeHead.setCord(getHeight() - 1, colSnake);
+        }
+    }
+
+    private void fillEmptyCells(Cell[][] board, boolean all) {
+        if (all) {
+            for (int i = 0; i < height; i++) {
+                for (int j = 0; j < width; j++) {
+                    board[i][j] = new EmptyCell();
+                }
+            }
+        } else {
+            for (int i = 0; i < height; i++) {
+                for (int j = 0; j < width; j++) {
+                    if(getCell(i,j) == null)
+                        board[i][j] = new EmptyCell();
+                }
+
+            }
+        }
+    }
     public interface Observer {
+
 
         // Level.Listener
         void cellUpdated(int l, int c, Cell cell);
