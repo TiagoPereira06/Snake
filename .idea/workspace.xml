@@ -7,7 +7,32 @@
     <list default="true" id="cfa31c34-64af-4d41-bfdf-b605f908e395" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Snake/isel/poo/snake/model/Level.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Snake/isel/poo/snake/model/Level.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/console/FieldView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/console/FieldView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/console/ParentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/console/ParentView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/console/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/console/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/console/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/console/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/console/tile/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/console/tile/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/console/tile/TilePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/console/tile/TilePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/ctrl/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/ctrl/Snake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/model/AppleCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/model/AppleCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/model/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/model/DeadSnakeHeadCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/model/DeadSnakeHeadCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/model/Dir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/model/Dir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/model/EmptyCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/model/EmptyCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/model/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/model/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/model/Level.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/model/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/model/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/model/ObstacleCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/model/ObstacleCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/model/SnakeBodyCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/model/SnakeBodyCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/model/SnakeHeadCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/model/SnakeHeadCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/view/AppleTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/view/AppleTile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/view/CellTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/view/CellTile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/view/DeadSnakeHeadTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/view/DeadSnakeHeadTile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/view/EmptyTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/view/EmptyTile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/view/ObstacleTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/view/ObstacleTile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/view/SnakeBodyTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/view/SnakeBodyTile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/view/SnakeHeadTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/view/SnakeHeadTile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/view/StatusPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/view/StatusPanel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,14 +80,19 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
-          <entry key="java" value="8366" />
+          <entry key="java" value="8375" />
           <entry key="txt" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8366" />
+          <entry key="JAVA" value="8375" />
           <entry key="PLAIN_TEXT" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.create.new" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -84,12 +114,36 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/Level.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="225" column="40" selection-start-line="225" selection-start-column="40" selection-end-line="225" selection-end-column="40" />
+            <state relative-caret-position="-63">
+              <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#10606#10607#0" expanded="true" />
-                <element signature="e#10665#10666#0" expanded="true" />
+                <element signature="e#1008#1009#0" expanded="true" />
+                <element signature="e#1054#1055#0" expanded="true" />
+                <element signature="e#1084#1085#0" expanded="true" />
+                <element signature="e#1113#1114#0" expanded="true" />
+                <element signature="e#1155#1156#0" expanded="true" />
+                <element signature="e#1191#1192#0" expanded="true" />
+                <element signature="e#1220#1221#0" expanded="true" />
+                <element signature="e#1248#1249#0" expanded="true" />
+                <element signature="e#1288#1289#0" expanded="true" />
+                <element signature="e#1322#1323#0" expanded="true" />
+                <element signature="e#2293#2294#0" expanded="true" />
+                <element signature="e#2327#2328#0" expanded="true" />
+                <element signature="e#2363#2364#0" expanded="true" />
+                <element signature="e#2395#2396#0" expanded="true" />
+                <element signature="e#2430#2431#0" expanded="true" />
+                <element signature="e#2484#2485#0" expanded="true" />
+                <element signature="e#2514#2515#0" expanded="true" />
+                <element signature="e#2548#2549#0" expanded="true" />
+                <element signature="e#2587#2588#0" expanded="true" />
+                <element signature="e#2619#2620#0" expanded="true" />
+                <element signature="e#2669#2670#0" expanded="true" />
+                <element signature="e#2706#2707#0" expanded="true" />
+                <element signature="e#2752#2753#0" expanded="true" />
+                <element signature="e#2795#2796#0" expanded="true" />
+                <element signature="e#10150#10151#0" expanded="true" />
+                <element signature="e#10209#10210#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -181,6 +235,37 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="Teletransportation" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -372,13 +457,13 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32847896" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.24757281" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.24757281" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.37055016" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="6" weight="0.32847896" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32795697" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32580644" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32686085" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32524273" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5015129" side_tool="true" weight="0.4204301" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32847896" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -705,12 +790,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/Level.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="225" column="40" selection-start-line="225" selection-start-column="40" selection-end-line="225" selection-end-column="40" />
+        <state relative-caret-position="-63">
+          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#10606#10607#0" expanded="true" />
-            <element signature="e#10665#10666#0" expanded="true" />
+            <element signature="e#1008#1009#0" expanded="true" />
+            <element signature="e#1054#1055#0" expanded="true" />
+            <element signature="e#1084#1085#0" expanded="true" />
+            <element signature="e#1113#1114#0" expanded="true" />
+            <element signature="e#1155#1156#0" expanded="true" />
+            <element signature="e#1191#1192#0" expanded="true" />
+            <element signature="e#1220#1221#0" expanded="true" />
+            <element signature="e#1248#1249#0" expanded="true" />
+            <element signature="e#1288#1289#0" expanded="true" />
+            <element signature="e#1322#1323#0" expanded="true" />
+            <element signature="e#2293#2294#0" expanded="true" />
+            <element signature="e#2327#2328#0" expanded="true" />
+            <element signature="e#2363#2364#0" expanded="true" />
+            <element signature="e#2395#2396#0" expanded="true" />
+            <element signature="e#2430#2431#0" expanded="true" />
+            <element signature="e#2484#2485#0" expanded="true" />
+            <element signature="e#2514#2515#0" expanded="true" />
+            <element signature="e#2548#2549#0" expanded="true" />
+            <element signature="e#2587#2588#0" expanded="true" />
+            <element signature="e#2619#2620#0" expanded="true" />
+            <element signature="e#2669#2670#0" expanded="true" />
+            <element signature="e#2706#2707#0" expanded="true" />
+            <element signature="e#2752#2753#0" expanded="true" />
+            <element signature="e#2795#2796#0" expanded="true" />
+            <element signature="e#10150#10151#0" expanded="true" />
+            <element signature="e#10209#10210#0" expanded="true" />
           </folding>
         </state>
       </provider>
