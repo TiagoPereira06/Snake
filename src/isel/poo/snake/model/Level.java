@@ -113,7 +113,7 @@ public class Level {
         losesSection();
         lineSnake = snakeHead.getLine();
         colSnake = snakeHead.getCol();
-        tele();
+        teletransport();
         if (safeToMove(lineSnake, colSnake, currentSnakeDirection)) {
             moveHead(currentSnakeDirection);
             if (stepCounter > 1 && !addAfterMove) {
@@ -135,7 +135,7 @@ public class Level {
         if (sectionsAdded >= 4) addAfterMove = false;
     }
 
-    private void tele() {
+    private void teletransport() {
         if ((lineSnake == 0 && currentSnakeDirection == UP) || (lineSnake == getHeight() - 1 && currentSnakeDirection == DOWN)
                 || (colSnake == 0 && currentSnakeDirection == LEFT) || (colSnake == getWidth() - 1 && currentSnakeDirection == RIGHT)) {
             teletranportation = true;
@@ -146,6 +146,8 @@ public class Level {
 
             if (currentSnakeDirection == DOWN) {
                 lineSnake = getHeight() - 2;
+                if(getCell(getHeight()-1,colSnake) instanceof AppleCell)
+                    updateRoutineAfterScore();
             } else if (currentSnakeDirection == UP) {
                 lineSnake = 1;
             } else if (currentSnakeDirection == LEFT) {
@@ -158,8 +160,10 @@ public class Level {
     }
 
     private void invertDirection(Dir currentSnakeDirection) {
-        //TODO
         if(currentSnakeDirection == UP) setSnakeDirection(DOWN);
+        else if(currentSnakeDirection == DOWN) setSnakeDirection(UP);
+        else if(currentSnakeDirection == LEFT) setSnakeDirection(RIGHT);
+        else setSnakeDirection(LEFT);
 
     }
 
@@ -173,15 +177,15 @@ public class Level {
         }
         ++moves;
             if (dir == UP) {
-                if(board[lineSnake-1][colSnake] instanceof AppleCell){
-                    updateRoutineAfterScore();
-                }
                 if (teletranportation) {
                     update.cellMoved(lineSnake, colSnake,getHeight()-1, colSnake, snakeHead);
                     putCell(getHeight()-1, colSnake, snakeHead);
                     snakeHead.setCord(getHeight()-1, colSnake);
 
                 }else{
+                    if(board[lineSnake-1][colSnake] instanceof AppleCell){
+                        updateRoutineAfterScore();
+                    }
                     update.cellMoved(lineSnake, colSnake, lineSnake - 1, colSnake, snakeHead);
                     putCell(lineSnake - 1, colSnake, snakeHead);
                     snakeHead.setCord(lineSnake - 1, colSnake);
@@ -227,20 +231,17 @@ public class Level {
                 deadSnake(currentSnakeHeadLine,currentSnakeHeadCol);
                 return false;
             }
-        }
-        if (dir == DOWN) {
+        } else if (dir == DOWN) {
             if ((getCell(currentSnakeHeadLine + 1,currentSnakeHeadCol)instanceof ObstacleCell)||(getCell(currentSnakeHeadLine+1,currentSnakeHeadCol) instanceof SnakeBodyCell)) {
                 deadSnake(currentSnakeHeadLine,currentSnakeHeadCol);
                 return false;
             }
-        }
-        if (dir == LEFT) {
+        } else if (dir == LEFT) {
             if ((getCell(currentSnakeHeadLine,currentSnakeHeadCol-1)instanceof ObstacleCell)||(getCell(currentSnakeHeadLine,currentSnakeHeadCol-1) instanceof SnakeBodyCell)) {
                 deadSnake(currentSnakeHeadLine,currentSnakeHeadCol);
                 return false;
             }
-        }
-        if (dir == RIGHT) {
+        }else{
             if ((getCell(currentSnakeHeadLine,currentSnakeHeadCol+1)instanceof ObstacleCell)||(getCell(currentSnakeHeadLine,currentSnakeHeadCol+1) instanceof SnakeBodyCell)) {
                 deadSnake(currentSnakeHeadLine,currentSnakeHeadCol);
                 return false;
@@ -269,6 +270,7 @@ public class Level {
             lin = lastLine;
             col = lastCol;
         }
+        teletranportation=false;
     }
 
 
