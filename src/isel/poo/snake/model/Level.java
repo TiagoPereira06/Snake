@@ -133,6 +133,7 @@ public class Level {
             System.out.println("ADD AFTER MOVE - " + addAfterMove);
             System.out.println("SECTION ADDED - " + sectionsAdded);*/
         if (sectionsAdded >= 4) addAfterMove = false;
+        teletranportation=false;
     }
 
     private void teletransport() {
@@ -270,7 +271,6 @@ public class Level {
             lin = lastLine;
             col = lastCol;
         }
-        teletranportation=false;
     }
 
 
