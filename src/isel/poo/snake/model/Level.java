@@ -338,13 +338,13 @@ public class Level {
 
 
     private void genNewApple() {
-            int l1 = (int) Math.floor(Math.random() * (getWidth()));
-            int c1 = (int) Math.floor(Math.random()* (getHeight()));
+            int l1 = (int) Math.floor(Math.random() * (getHeight()));
+            int c1 = (int) Math.floor(Math.random()* (getWidth()));
             AppleCell apple = new AppleCell();
 
             while (!isEmpty(l1,c1)) {
-                l1 = (int) Math.floor(Math.random()* (getWidth()));
-                c1 = (int) Math.floor(Math.random()* (getHeight()));
+                l1 = (int) Math.floor(Math.random()* (getHeight()));
+                c1 = (int) Math.floor(Math.random()* (getWidth()));
             }
             update.cellCreated(l1,c1,apple);
             board[l1][c1] = apple;
