@@ -7,14 +7,14 @@
 
 XXXXX
 
-A             A
+             A
 
        @
 
 X           A
 X
 X             X
-              X
+         A    X
 
 #2 20 x 20
 XXXXXXXXX XXXXXXXXXX
