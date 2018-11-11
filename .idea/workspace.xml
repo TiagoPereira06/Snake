@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cfa31c34-64af-4d41-bfdf-b605f908e395" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/model/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/model/Level.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Snake/isel/poo/snake/model/Level.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Snake/isel/poo/snake/model/Level.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +19,7 @@
     <session id="1455729261">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="35" />
+          <entry key="project.closed" value="36" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.10" value="3" />
@@ -78,11 +79,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/Level.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
+            <state relative-caret-position="488">
+              <caret line="354" selection-start-line="354" selection-end-line="354" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1549#1871#0" />
+                <element signature="e#2344#2542#0" />
+                <element signature="e#2548#3445#0" />
                 <element signature="e#3451#4822#0" />
+                <element signature="e#5305#5383#0" />
                 <element signature="e#4828#5138#0" />
                 <element signature="e#5145#8547#0" />
                 <element signature="e#8553#9946#0" />
@@ -92,8 +97,13 @@
                 <element signature="e#11326#11596#0" />
                 <element signature="e#11933#12144#0" />
                 <element signature="e#12150#12667#0" />
+                <element signature="e#12793#13078#0" />
                 <element signature="e#12964#13458#0" />
+                <element signature="e#13662#13815#0" />
+                <element signature="e#13821#14058#0" />
+                <element signature="e#14064#14938#0" />
                 <element signature="e#15097#15728#0" />
+                <element signature="e#15734#16057#0" />
               </folding>
             </state>
           </provider>
@@ -384,7 +394,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32847896" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.24757281" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.24757281" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.37216827" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -961,11 +971,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/Level.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
+        <state relative-caret-position="488">
+          <caret line="354" selection-start-line="354" selection-end-line="354" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1549#1871#0" />
+            <element signature="e#2344#2542#0" />
+            <element signature="e#2548#3445#0" />
             <element signature="e#3451#4822#0" />
+            <element signature="e#5305#5383#0" />
             <element signature="e#4828#5138#0" />
             <element signature="e#5145#8547#0" />
             <element signature="e#8553#9946#0" />
@@ -975,8 +989,13 @@
             <element signature="e#11326#11596#0" />
             <element signature="e#11933#12144#0" />
             <element signature="e#12150#12667#0" />
+            <element signature="e#12793#13078#0" />
             <element signature="e#12964#13458#0" />
+            <element signature="e#13662#13815#0" />
+            <element signature="e#13821#14058#0" />
+            <element signature="e#14064#14938#0" />
             <element signature="e#15097#15728#0" />
+            <element signature="e#15734#16057#0" />
           </folding>
         </state>
       </provider>
