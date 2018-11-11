@@ -82,7 +82,6 @@ public class Level {
         return remApples;
     }
 
-
     public void setObserver(Observer updater) {
         this.update = updater;
     }
@@ -120,8 +119,6 @@ public class Level {
             }
         } else return;
 
-        System.out.println(sectionsToAdd);
-        System.out.println(sectionsAdded);
         if (sectionsAdded >= sectionsToAdd) addAfterMove = false;
         teletransportation = false;
 
@@ -332,14 +329,6 @@ public class Level {
         putCell(cell.getLine(), cell.getCol(), new EmptyCell());
         cell.setCord(lin, col);
         putCell(lin, col, cell);
-    }
-    private void moveCell(int col, int lin, MouseCell cell) {
-        update.cellMoved(cell.getLine(), cell.getCol(), lin, col, cell);
-        putCell(cell.getLine(), cell.getCol(), new EmptyCell());
-        cell.setCord(lin, col);
-        putCell(lin, col, cell);
-        currentMouseLine=lin;
-        currentMouseLine=col;
     }
 
     private void fillEmptyCells(Cell[][] board) {
