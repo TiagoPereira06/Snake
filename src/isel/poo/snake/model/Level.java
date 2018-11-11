@@ -25,7 +25,7 @@ public class Level {
         snake = new LinkedList<>();
         setHeight(height);
         setWidth(width);
-        fillEmptyCells(board);//TODO: VER SE HÁ OUTRA MANEIRA DE FAZER ISTO
+        fillEmptyCells(board);
         setLevelNumber(levelNumber);
         remApples = 10;
     }
@@ -80,8 +80,7 @@ public class Level {
     }
 
     void init(Game game) {
-        // TODO: INEFICIENTE E ESTÚPIDO
-        findHead(); //TODO: ARRANJAR OUTRA MANEIRA DE OBTER AS COORDENADAS DA CABEÇA DA SNAKE
+        findHead();
         currentGame = game;
         currentGame.setScore(score);
         currentGame.setLevelNumber(levelNumber);
