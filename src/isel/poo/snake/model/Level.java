@@ -403,6 +403,7 @@ public class Level {
         }
         MouseCell mouseCell = new MouseCell(targetLine,targetCol);
         update.cellMoved(currentMouseLine,currentMouseCol,targetLine,targetCol,mouseCell);
+        putCell(currentMouseLine,currentMouseCol,new EmptyCell());
         putCell(targetLine,targetCol,mouseCell);
         currentMouseLine=targetLine;
         currentMouseCol=targetCol;
