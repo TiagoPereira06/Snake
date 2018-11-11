@@ -353,14 +353,11 @@ public class Level {
     }
 
     private void updateRoutineAfterApple() {
-        //if(cell instanceof AppleCell) {
             if (remApples > initialAppleCount) genNewApple();
             lastScoreStepCounter = stepCounter;
             updateNumbers();
             sectionsToAdd = 4;
             addAfterMove = true;
-            //else{
-
         }
 
     private void genNewApple() {
