@@ -4,16 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/isel/poo/snake/model/Level.java" description="public Level(int levelNumber, int height, int widt..." line="24" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfa31c34-64af-4d41-bfdf-b605f908e395" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/levels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Snake/isel/poo/console/Window$CounterView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Snake/isel/poo/console/Window$CounterView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Snake/isel/poo/console/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Snake/isel/poo/console/Window.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Snake/isel/poo/snake/ctrl/Snake$Updater.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Snake/isel/poo/snake/ctrl/Snake$Updater.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Snake/isel/poo/snake/ctrl/Snake.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Snake/isel/poo/snake/ctrl/Snake.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/isel/poo/console/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/console/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/ctrl/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/ctrl/Snake.java" afterDir="false" />
-    </list>
+    <list default="true" id="cfa31c34-64af-4d41-bfdf-b605f908e395" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,11 +79,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/levels.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            <state relative-caret-position="627">
+              <caret line="39" column="2" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/Level.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="149" column="29" lean-forward="true" selection-start-line="149" selection-start-column="29" selection-end-line="149" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/isel/poo/console/Window.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2244">
+              <caret line="133" column="12" selection-start-line="133" selection-start-column="12" selection-end-line="133" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -478,8 +490,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/isel/poo/console/Window.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="2244">
+          <caret line="133" column="12" selection-start-line="133" selection-start-column="12" selection-end-line="133" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -813,8 +825,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/Level.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1533">
-          <caret line="173" column="28" selection-start-line="173" selection-start-column="28" selection-end-line="173" selection-end-column="28" />
+        <state relative-caret-position="233">
+          <caret line="149" column="29" lean-forward="true" selection-start-line="149" selection-start-column="29" selection-end-line="149" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -961,8 +973,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/levels.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        <state relative-caret-position="627">
+          <caret line="39" column="2" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
         </state>
       </provider>
     </entry>
