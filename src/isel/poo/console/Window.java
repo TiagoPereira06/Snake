@@ -1,6 +1,8 @@
 package isel.poo.console;
 
 import isel.leic.pg.Console;
+import isel.poo.snake.ctrl.Snake;
+
 import static isel.leic.pg.Console.*;
 
 /**
@@ -139,6 +141,29 @@ public class Window {
         return key!='N';
     }
 
+    public int setDifficulty(){
+        say( "[E]asy | [M]edium | [H]ard?");
+        disableMouseEvents();
+        clearAllChars();
+        cursor(true);
+        int key;
+        do {
+            while ((key = waitKeyPressed(0)) < 0) ;
+            System.out.println(key);
+            waitKeyReleased(key);
+            if (key>='a' && key<='z')
+                key += 'A'-'a';
+        } while(key!='E' && key!='M' && key!='H');
+        clear(height, GRAY, width);
+        cursor(false);
+        enableMouseEvents(false);
+
+        if (key == 'E') Snake.STEP_TIME = 500;
+        else if (key == 'M') Snake.STEP_TIME = 300;
+        else Snake.STEP_TIME = 200;
+        return Snake.STEP_TIME;
+    }
+
     private void clear(int line, int background, int size) {
         cursor(line, 0);
         setBackground(background);
@@ -172,7 +197,7 @@ public class Window {
         private int value = 20;
         private CounterView() { super(2,2,3,8,GREEN); repaint(); }
         @Override public void paint() { print(1,1,"val="+value); }
-    };
+    }
 
     private static void count(CounterView cv, int delta) {
         for (int i = 0; i < 10; i++) {

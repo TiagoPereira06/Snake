@@ -38,7 +38,7 @@ public class Snake {
     private boolean escaped = false;
     private boolean paused = false;
 
-    private static final int STEP_TIME = 500;               // Milliseconds by step
+    public static int STEP_TIME;                           // Milliseconds by step
     private long time;                                      // Current time for next step
 
     /**
@@ -49,6 +49,7 @@ public class Snake {
         try (InputStream file = new FileInputStream(LEVELS_FILE)) { // Open description file
             model = new Game(file);                                 // Create game model
             model.setListener(updater);                             // Set listener of game
+            win.setDifficulty();                                     // Set Dificulty (speed) of the game
             while ((level = model.loadNextLevel() ) != null )       // Load level model
                 if (!playLevel() || !win.question("Next level")) {  // Play level
                     win.message("Bye.");

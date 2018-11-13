@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="Snake:jar" />
-    </artifacts-to-build>
-  </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/isel/poo/snake/model/Level.java" description="public Level(int levelNumber, int height, int widt..." line="25" />
+    <bookmark url="file://$PROJECT_DIR$/src/isel/poo/snake/model/Level.java" description="public Level(int levelNumber, int height, int widt..." line="24" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfa31c34-64af-4d41-bfdf-b605f908e395" name="Default Changelist" comment="" />
+    <list default="true" id="cfa31c34-64af-4d41-bfdf-b605f908e395" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/levels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Snake/isel/poo/console/Window$CounterView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Snake/isel/poo/console/Window$CounterView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Snake/isel/poo/console/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Snake/isel/poo/console/Window.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Snake/isel/poo/snake/ctrl/Snake$Updater.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Snake/isel/poo/snake/ctrl/Snake$Updater.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Snake/isel/poo/snake/ctrl/Snake.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Snake/isel/poo/snake/ctrl/Snake.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/console/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/console/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/isel/poo/snake/ctrl/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/isel/poo/snake/ctrl/Snake.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,53 +25,62 @@
     <session id="1455729261">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="39" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="42" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="4" />
-          <entry key="project.open.time.10" value="3" />
+          <entry key="project.open.time.10" value="4" />
           <entry key="project.open.time.11" value="4" />
           <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.13" value="3" />
-          <entry key="project.open.time.14" value="4" />
-          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.13" value="4" />
+          <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.6" value="2" />
-          <entry key="project.open.time.7" value="4" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="3" />
           <entry key="project.open.time.8" value="3" />
-          <entry key="project.open.time.9" value="8" />
-          <entry key="project.opened" value="40" />
+          <entry key="project.open.time.9" value="10" />
+          <entry key="project.opened" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="JAVA/" value="1" />
           <entry key="class" value="4" />
-          <entry key="java" value="221" />
+          <entry key="console" value="2" />
+          <entry key="ctrl" value="1" />
+          <entry key="java" value="241" />
+          <entry key="model" value="4" />
+          <entry key="poo" value="1" />
+          <entry key="snake" value="2" />
           <entry key="txt" value="4" />
+          <entry key="view" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="4" />
-          <entry key="JAVA" value="221" />
+          <entry key="JAVA" value="241" />
           <entry key="PLAIN_TEXT" value="4" />
+          <entry key="UML" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
-          <entry key="java" value="9418" />
-          <entry key="txt" value="86" />
+          <entry key="java" value="10112" />
+          <entry key="txt" value="104" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9418" />
-          <entry key="PLAIN_TEXT" value="90" />
+          <entry key="JAVA" value="10112" />
+          <entry key="PLAIN_TEXT" value="108" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
         <counts>
+          <entry key="git.branch.checkout.local" value="1" />
           <entry key="git.branch.create.new" value="1" />
         </counts>
       </usages-collector>
@@ -75,32 +88,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/levels.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/Level.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="419" column="40" selection-start-line="419" selection-start-column="40" selection-end-line="419" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/isel/poo/console/Window.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2210">
-              <caret line="131" column="12" selection-start-line="131" selection-start-column="12" selection-end-line="131" selection-end-column="12" />
+            <state relative-caret-position="289">
+              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -109,7 +101,7 @@
         <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/ctrl/Snake.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1275">
-              <caret line="88" selection-start-line="88" selection-end-line="88" />
+              <caret line="89" selection-start-line="89" selection-end-line="89" />
             </state>
           </provider>
         </entry>
@@ -193,42 +185,17 @@
       <find>DIR</find>
       <find>empty</find>
       <find>upCounter==10</find>
-      <find>deadsn</find>
+      <find>putCell</find>
+      <find>updateScore</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="NewFeatures" />
+        <entry key="$PROJECT_DIR$" value="OptionalFeatures" />
       </map>
     </option>
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="LOCAL">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="Teletransportation" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
-    <excluded-from-favorite>
-      <branch-storage>
-        <map>
-          <entry type="LOCAL">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="master" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </excluded-from-favorite>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -239,24 +206,26 @@
         <option value="$PROJECT_DIR$/src/isel/poo/snake/model/EmptyCell.java" />
         <option value="$PROJECT_DIR$/src/isel/poo/snake/model/ObstacleCell.java" />
         <option value="$PROJECT_DIR$/src/isel/poo/snake/model/Loader.java" />
-        <option value="$PROJECT_DIR$/src/isel/poo/snake/view/EmptyTile.java" />
-        <option value="$PROJECT_DIR$/src/isel/poo/snake/view/ObstacleTile.java" />
-        <option value="$PROJECT_DIR$/src/isel/poo/snake/view/AppleTile.java" />
         <option value="$PROJECT_DIR$/src/isel/poo/snake/view/StatusPanel.java" />
         <option value="$PROJECT_DIR$/src/isel/poo/snake/model/Game.java" />
-        <option value="$PROJECT_DIR$/src/isel/poo/snake/view/SnakeBodyTile.java" />
-        <option value="$PROJECT_DIR$/src/isel/poo/snake/model/Cell.java" />
         <option value="$PROJECT_DIR$/src/isel/poo/snake/model/SnakeHeadCell.java" />
-        <option value="$PROJECT_DIR$/src/isel/poo/snake/view/SnakeHeadTile.java" />
         <option value="$PROJECT_DIR$/src/isel/poo/snake/model/SnakeBodyCell.java" />
         <option value="$PROJECT_DIR$/src/isel/poo/snake/model/SnakeHeadDeadCell.java" />
         <option value="$PROJECT_DIR$/src/isel/poo/snake/view/SnakeHeadDeadTile.java" />
-        <option value="$PROJECT_DIR$/src/isel/poo/snake/view/DeadSnakeHeadTile.java" />
         <option value="$PROJECT_DIR$/src/isel/poo/snake/model/DeadSnakeHeadCell.java" />
         <option value="$PROJECT_DIR$/src/isel/poo/snake/ctrl/Snake.java" />
+        <option value="$PROJECT_DIR$/src/isel/poo/snake/model/Cell.java" />
+        <option value="$PROJECT_DIR$/src/isel/poo/snake/model/MouseCell.java" />
         <option value="$PROJECT_DIR$/src/isel/poo/snake/view/CellTile.java" />
-        <option value="$PROJECT_DIR$/levels.txt" />
+        <option value="$PROJECT_DIR$/src/isel/poo/snake/view/AppleTile.java" />
+        <option value="$PROJECT_DIR$/src/isel/poo/snake/view/DeadSnakeHeadTile.java" />
+        <option value="$PROJECT_DIR$/src/isel/poo/snake/view/EmptyTile.java" />
+        <option value="$PROJECT_DIR$/src/isel/poo/snake/view/MouseTile.java" />
+        <option value="$PROJECT_DIR$/src/isel/poo/snake/view/ObstacleTile.java" />
+        <option value="$PROJECT_DIR$/src/isel/poo/snake/view/SnakeBodyTile.java" />
+        <option value="$PROJECT_DIR$/src/isel/poo/snake/view/SnakeHeadTile.java" />
         <option value="$PROJECT_DIR$/src/isel/poo/snake/model/Level.java" />
+        <option value="$PROJECT_DIR$/levels.txt" />
       </list>
     </option>
   </component>
@@ -354,8 +323,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../PG1717/Game2048" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Relatórios/TG1/Package viewV2.png" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -391,6 +360,7 @@
       <list>
         <item itemvalue="Application.Snake" />
         <item itemvalue="Application.Snake" />
+        <item itemvalue="Application.Snake" />
       </list>
     </recent_temporary>
   </component>
@@ -405,21 +375,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="752" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18835099" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18835099" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32847896" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" weight="0.24757281" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.37055016" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.24595469" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.37216827" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Terminal" order="6" weight="0.32200646" />
+      <window_info anchor="bottom" id="Terminal" order="6" sideWeight="0.49848714" weight="0.32847896" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32686085" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32524273" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50226927" side_tool="true" weight="0.24757281" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32686085" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5015129" side_tool="true" weight="0.32847896" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32847896" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -433,17 +404,20 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="01" />
-    <MESSAGE value="Tranportation UP to DOWN COMPLETE (All functions working)" />
-    <MESSAGE value="All functions working" />
-    <option name="LAST_COMMIT_MESSAGE" value="All functions working" />
+    <MESSAGE value="Mouse random movements implementation" />
+    <MESSAGE value="Mouse Movements/Score working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mouse Movements/Score working" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="board" language="JAVA" />
+        <watch expression="snakeHead" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
-      <expression>
-        <expression-string>snakeHead</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
       <expression>
         <expression-string>board</expression-string>
         <language-id>JAVA</language-id>
@@ -488,24 +462,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/Dir.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5100">
           <caret line="329" selection-start-line="329" selection-end-line="329" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/view/ObstacleTile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -516,45 +476,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/EmptyCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/ObstacleCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/view/EmptyTile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/Cell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/AppleCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/isel/poo/console/Window.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2210">
-          <caret line="131" column="12" selection-start-line="131" selection-start-column="12" selection-end-line="131" selection-end-column="12" />
+        <state relative-caret-position="272">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -572,10 +497,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/view/StatusPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/isel/poo/console/ParentView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/DeadSnakeHeadCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -586,66 +525,451 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/view/StatusPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="569" column="6" selection-start-line="569" selection-start-column="6" selection-end-line="569" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
+        <state relative-caret-position="799">
+          <caret line="56" column="21" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/SnakeBodyCell.java">
+    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/AppleCell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        <state relative-caret-position="34">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/DeadSnakeHeadCell.java">
+    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/Dir.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-          <folding>
-            <element signature="e#129#130#0" expanded="true" />
-            <element signature="e#155#156#0" expanded="true" />
-          </folding>
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/ObstacleCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/lang/Math.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="442" column="25" selection-start-line="442" selection-start-column="25" selection-end-line="442" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/view/AppleTile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/view/DeadSnakeHeadTile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/view/CellTile.java">
+    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/view/EmptyTile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="119">
+          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/view/ObstacleTile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/view/SnakeBodyTile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/view/SnakeHeadTile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/SnakeBodyCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/EmptyCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/isel/poo/console/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        <state relative-caret-position="1156">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/isel.poo">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>isel.poo</OriginalElement>
+          <nodes>
+            <node x="" y="">isel.poo.snake</node>
+            <node x="" y="">isel.poo.console</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="60.0" y="52.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="" y="">isel</node>
+            <node x="" y="">com</node>
+            <node x="" y="">images</node>
+            <node x="" y="">netscape</node>
+            <node x="" y="">oracle</node>
+            <node x="" y="">org</node>
+            <node x="" y="">toolbarButtonGraphics</node>
+            <node x="" y="">sun</node>
+            <node x="" y="">META-INF</node>
+            <node x="" y="">jdk</node>
+            <node x="" y="">groovyjarjarasm</node>
+            <node x="" y="">java</node>
+            <node x="" y="">groovy</node>
+            <node x="" y="">docs</node>
+            <node x="" y="">javax</node>
+            <node x="" y="">groovyjarjarcommonscli</node>
+            <node x="" y="">javafx</node>
+            <node x="" y="">groovyjarjarantlr</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.8397565922920892" x="234.0" y="227.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/isel.poo.console">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>isel.poo.console</OriginalElement>
+          <nodes>
+            <node x="512.5" y="43.5">isel.poo.console.Window</node>
+            <node x="10.5" y="543.0">isel.poo.console.FieldView</node>
+            <node x="149.94642857142858" y="779.0">isel.poo.console.tile</node>
+            <node x="268.5" y="554.5">isel.poo.console.ParentView</node>
+            <node x="136.75" y="0.0">isel.poo.console.View</node>
+            <node x="521.5" y="587.5">isel.poo.console.Window.CounterView</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="isel.poo.console.tile" target="isel.poo.console.ParentView">
+              <point x="23.75" y="-14.5" />
+              <point x="221.19642857142858" y="754.0" />
+              <point x="385.0" y="754.0" />
+              <point x="0.0" y="81.5" />
+            </edge>
+            <edge source="isel.poo.console.Window.CounterView" target="isel.poo.console.Window">
+              <point x="37.0" y="-48.5" />
+              <point x="0.0" y="203.0" />
+            </edge>
+            <edge source="isel.poo.console.tile" target="isel.poo.console.View">
+              <point x="-23.75" y="-14.5" />
+              <point x="173.69642857142858" y="754.0" />
+              <point x="0.0" y="754.0" />
+              <point x="0.0" y="513.0" />
+              <point x="166.875" y="513.0" />
+              <point x="-90.375" y="246.5" />
+            </edge>
+            <edge source="isel.poo.console.ParentView" target="isel.poo.console.View">
+              <point x="0.0" y="-81.5" />
+              <point x="385.0" y="523.0" />
+              <point x="287.375" y="523.0" />
+              <point x="30.125" y="246.5" />
+            </edge>
+            <edge source="isel.poo.console.Window.CounterView" target="isel.poo.console.View">
+              <point x="-37.0" y="-48.5" />
+              <point x="558.5" y="513.0" />
+              <point x="347.625" y="513.0" />
+              <point x="90.375" y="246.5" />
+            </edge>
+            <edge source="isel.poo.console.FieldView" target="isel.poo.console.View">
+              <point x="0.0" y="-93.0" />
+              <point x="129.5" y="523.0" />
+              <point x="227.125" y="523.0" />
+              <point x="-30.125" y="246.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.5" x="-151.0" y="470.0" />
+          <SelectedNodes>
+            <node>isel.poo.console.Window.CounterView</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/isel.poo.snake">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>isel.poo.snake</OriginalElement>
+          <nodes>
+            <node x="" y="">isel.poo.snake.view</node>
+            <node x="" y="">isel.poo.snake.ctrl</node>
+            <node x="" y="">isel.poo.snake.model</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="57.0" y="91.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/isel.poo.snake.ctrl">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>isel.poo.snake.ctrl</OriginalElement>
+          <nodes>
+            <node x="" y="">isel.poo.snake.ctrl.Snake</node>
+            <node x="" y="">isel.poo.snake.ctrl.Snake.Updater</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.5905848787446505" x="129.0" y="341.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/Level.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1533">
+          <caret line="173" column="28" selection-start-line="173" selection-start-column="28" selection-end-line="173" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/Loader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="67" column="17" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
+          <folding>
+            <element signature="e#1064#1065#0" expanded="true" />
+            <element signature="e#1092#1093#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/isel.poo.snake.model">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>isel.poo.snake.model</OriginalElement>
+          <nodes>
+            <node x="834.0" y="336.0">isel.poo.snake.model.SnakeHeadCell</node>
+            <node x="594.0" y="336.0">isel.poo.snake.model.DeadSnakeHeadCell</node>
+            <node x="726.38125" y="101.0">isel.poo.snake.model.SnakeBodyCell</node>
+            <node x="1136.38125" y="179.0">isel.poo.snake.model.AppleCell</node>
+            <node x="322.0" y="345.0">isel.poo.snake.model.Loader.LevelFormatException</node>
+            <node x="0.0" y="1696.0">isel.poo.snake.model.Dir</node>
+            <node x="1540.88125" y="0.0">isel.poo.snake.model.Game</node>
+            <node x="9.5" y="1512.0">isel.poo.snake.model.Level.Observer</node>
+            <node x="1255.38125" y="179.0">isel.poo.snake.model.ObstacleCell</node>
+            <node x="938.38125" y="101.0">isel.poo.snake.model.MouseCell</node>
+            <node x="1389.38125" y="179.0">isel.poo.snake.model.EmptyCell</node>
+            <node x="0.0" y="0.0">isel.poo.snake.model.Level</node>
+            <node x="1086.25" y="0.0">isel.poo.snake.model.Cell</node>
+            <node x="1536.38125" y="258.0">isel.poo.snake.model.Game.Listener</node>
+            <node x="337.5" y="0.0">isel.poo.snake.model.Loader</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="isel.poo.snake.model.Game.Listener" target="isel.poo.snake.model.Game">
+              <point x="0.0" y="-25.5" />
+              <point x="0.0" y="104.0" />
+            </edge>
+            <edge source="isel.poo.snake.model.ObstacleCell" target="isel.poo.snake.model.Cell">
+              <point x="0.0" y="-14.5" />
+              <point x="1312.38125" y="81.0" />
+              <point x="1218.55" y="81.0" />
+              <point x="37.799999999999955" y="25.5" />
+            </edge>
+            <edge source="isel.poo.snake.model.AppleCell" target="isel.poo.snake.model.Cell">
+              <point x="0.0" y="-14.5" />
+              <point x="1185.88125" y="81.0" />
+              <point x="1180.75" y="81.0" />
+              <point x="0.0" y="25.5" />
+            </edge>
+            <edge source="isel.poo.snake.model.Loader.LevelFormatException" target="isel.poo.snake.model.Loader">
+              <point x="0.0" y="-48.0" />
+              <point x="0.0" y="147.5" />
+            </edge>
+            <edge source="isel.poo.snake.model.EmptyCell" target="isel.poo.snake.model.Cell">
+              <point x="0.0" y="-14.5" />
+              <point x="1440.38125" y="71.0" />
+              <point x="1256.35" y="71.0" />
+              <point x="75.59999999999991" y="25.5" />
+            </edge>
+            <edge source="isel.poo.snake.model.SnakeBodyCell" target="isel.poo.snake.model.Cell">
+              <point x="0.0" y="-92.5" />
+              <point x="822.38125" y="71.0" />
+              <point x="1105.15" y="71.0" />
+              <point x="-75.60000000000002" y="25.5" />
+            </edge>
+            <edge source="isel.poo.snake.model.Level.Observer" target="isel.poo.snake.model.Level">
+              <point x="0.0" y="-69.5" />
+              <point x="0.0" y="731.0" />
+            </edge>
+            <edge source="isel.poo.snake.model.MouseCell" target="isel.poo.snake.model.Cell">
+              <point x="0.0" y="-92.5" />
+              <point x="1027.38125" y="81.0" />
+              <point x="1142.95" y="81.0" />
+              <point x="-37.799999999999955" y="25.5" />
+            </edge>
+            <edge source="isel.poo.snake.model.SnakeHeadCell" target="isel.poo.snake.model.SnakeBodyCell">
+              <point x="0.0" y="-36.5" />
+              <point x="930.5" y="311.0" />
+              <point x="870.38125" y="311.0" />
+              <point x="48.0" y="92.5" />
+            </edge>
+            <edge source="isel.poo.snake.model.DeadSnakeHeadCell" target="isel.poo.snake.model.SnakeBodyCell">
+              <point x="0.0" y="-36.5" />
+              <point x="704.0" y="311.0" />
+              <point x="774.38125" y="311.0" />
+              <point x="-48.0" y="92.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.309328968903437" x="-108.0" y="766.0" />
+          <SelectedNodes>
+            <node>isel.poo.snake.model.Cell</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/isel.poo.snake.view">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>isel.poo.snake.view</OriginalElement>
+          <nodes>
+            <node x="" y="">isel.poo.snake.view.CellTile</node>
+            <node x="" y="">isel.poo.snake.view.SnakeHeadTile</node>
+            <node x="" y="">isel.poo.snake.view.StatusPanel</node>
+            <node x="" y="">isel.poo.snake.view.DeadSnakeHeadTile</node>
+            <node x="" y="">isel.poo.snake.view.MouseTile</node>
+            <node x="" y="">isel.poo.snake.view.SnakeBodyTile</node>
+            <node x="" y="">isel.poo.snake.view.AppleTile</node>
+            <node x="" y="">isel.poo.snake.view.ObstacleTile</node>
+            <node x="" y="">isel.poo.snake.view.EmptyTile</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.864329268292683" x="582.0" y="318.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/levels.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/ctrl/Snake.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
         </state>
       </provider>
     </entry>
@@ -659,6 +983,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/MouseCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <folding>
+            <element signature="e#378#379#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/SnakeHeadCell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -666,58 +1000,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/levels.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/view/SnakeHeadTile.java">
+    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/view/SnakeBodyTile.java">
+    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/view/CellTile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        <state relative-caret-position="391">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/view/AppleTile.java">
+    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/view/MouseTile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/ctrl/Snake.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/Loader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+        <state relative-caret-position="85">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
           <folding>
-            <element signature="e#1064#1065#0" expanded="true" />
-            <element signature="e#1092#1093#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/isel/poo/snake/model/Level.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="419" column="40" selection-start-line="419" selection-start-column="40" selection-end-line="419" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#125#126#0" expanded="true" />
+            <element signature="e#185#186#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -733,6 +1036,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

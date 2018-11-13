@@ -1,4 +1,3 @@
-
 #1 15 x 15
               X
               X
@@ -7,14 +6,14 @@
 
 XXXXX
 
-             A
+A             A
 
        @
 
-X           A
+X
 X
 X             X
-         A    X
+A             X
 
 #2 20 x 20
 XXXXXXXXX XXXXXXXXXX
@@ -61,3 +60,26 @@ X    A     X            X
 X          X            X
 X          X  @        MX
 XXXXXXXXXXXXXXXXXXXX XXXX
+
+#4 21x20
+XXXXXXXXX  XXXXXXXXX
+X       X  X       X
+X       X  X       X
+X       X  X       X
+X    A             X
+X       X  X       X
+X       X  X       X
+X       X  X       X
+X       X  X       X
+X       X  X A     X
+XXXXXXXXX  XXXXXXXXX
+X       X  X    A  X
+X       X  X       X
+X       X  X       X
+X   @   A          X
+X       X  X       X
+X       X  X       X
+X       X  X       X
+X       X  X       X
+X       X  X       X
+XXXXXXXXX  XXXXXXXXX
