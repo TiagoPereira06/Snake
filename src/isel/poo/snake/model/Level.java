@@ -119,9 +119,6 @@ public class Level {
             }
         } else return;
 
-        System.out.println(snake.size());
-        System.out.println(sectionsToAdd);
-
         if (sectionsAdded >= sectionsToAdd){ addAfterMove = false;
         sectionsToAdd=0;}
         teletransportation = false;
