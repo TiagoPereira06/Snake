@@ -10,11 +10,13 @@ public class Level {
 
 
     private int height, width, levelNumber, remApples, moves, initialLine, initialCol, stepCounter, score = 0, sectionsAdded, lastScoreStepCounter,
-            initialAppleCount, prevLineSnake, prevColSnake;
+            initialAppleCount, prevLineSnake, prevColSnake, mouseLine, mouseCol,targetLine,targetCol,sectionsToAdd, mousesCount;
     private Game currentGame;
     private Cell[][] board;
-    private Dir currentSnakeDirection = UP, prevSnakeDirection;
+    private Cell target;
+    private Dir currentSnakeDirection = UP, prevSnakeDirection, mouseDirection;
     private List<SnakeBodyCell> snake;
+    private LinkedList<MouseCell> mouses = new LinkedList<>();
     private SnakeHeadCell snakeHead;
     private Observer update;
     private int lineSnake, colSnake; //Current Cord SnakeHead
@@ -54,6 +56,16 @@ public class Level {
         return board[l][c];
     }
 
+    void putCell(int l, int c, Cell cell) {
+        if (cell instanceof AppleCell) ++initialAppleCount;
+        if (cell instanceof MouseCell){
+            ++mousesCount;
+            mouses.add((MouseCell) cell);
+            ((MouseCell) cell).setCord(l,c);
+        } 
+        board[l][c] = cell;
+    }
+
     public boolean snakeIsDead() {
         return snakeDead;
     }
@@ -70,7 +82,6 @@ public class Level {
         return remApples;
     }
 
-
     public void setObserver(Observer updater) {
         this.update = updater;
     }
@@ -80,7 +91,7 @@ public class Level {
     }
 
     void init(Game game) {
-        findHead();
+        initSnakeHeadCoordinates();
         currentGame = game;
         currentGame.setScore(score);
         currentGame.setLevelNumber(levelNumber);
@@ -91,6 +102,7 @@ public class Level {
     public void step() {
         ++stepCounter;
         losesSection();
+        mousesMove();
         lineSnake = snakeHead.getLine();
         colSnake = snakeHead.getCol();
         teletransport();
@@ -106,13 +118,12 @@ public class Level {
                 putCell(initialLine, initialCol, snake.get(stepCounter));
             }
         } else return;
-/*
-            System.out.println("SNAKE DEAD - " + snakeDead);
-            System.out.println("REM APPLES - " + remApples);
-            System.out.println("SCORE - " + score);
-            System.out.println("ADD AFTER MOVE - " + addAfterMove);
-            System.out.println("SECTION ADDED - " + sectionsAdded);*/
-        if (sectionsAdded >= 4) addAfterMove = false;
+
+        System.out.println(snake.size());
+        System.out.println(sectionsToAdd);
+
+        if (sectionsAdded >= sectionsToAdd){ addAfterMove = false;
+        sectionsToAdd=0;}
         teletransportation = false;
 
     }
@@ -129,21 +140,46 @@ public class Level {
             if (currentSnakeDirection == DOWN) {
                 lineSnake = getHeight() - 2;
                 if(getCell(getHeight()-1,colSnake) instanceof AppleCell)
-                    updateRoutineAfterScore();
+                    updateRoutineAfterApple();
+                else if(getCell(getHeight()-1,colSnake) instanceof MouseCell)
+                    updateRoutineAfterMouse(getHeight()-1,colSnake);
             } else if (currentSnakeDirection == UP) {
                 lineSnake = 1;
                 if(getCell(0,colSnake) instanceof AppleCell)
-                    updateRoutineAfterScore();
+                    updateRoutineAfterApple();
+                else if(getCell(0,colSnake) instanceof MouseCell)
+                    updateRoutineAfterMouse(0,colSnake);
             } else if (currentSnakeDirection == LEFT) {
                 colSnake = 1;
                 if(getCell(lineSnake,0) instanceof AppleCell)
-                    updateRoutineAfterScore();
+                    updateRoutineAfterApple();
+                else if(getCell(lineSnake,0) instanceof MouseCell)
+                    updateRoutineAfterMouse(lineSnake,0);
             } else if (currentSnakeDirection == RIGHT) {
                 colSnake = getWidth() - 2;
                 if(getCell(lineSnake,getWidth()-1) instanceof AppleCell)
-                    updateRoutineAfterScore();
+                    updateRoutineAfterApple();
+                else if(getCell(lineSnake,getWidth()-1) instanceof MouseCell)
+                    updateRoutineAfterMouse(lineSnake,getWidth()-1);
 
             }
+        }
+    }
+
+    private void updateRoutineAfterMouse(int line, int col) {
+        removeFromMouses(line,col);
+        score+=10;
+        currentGame.setScore(score);
+        sectionsToAdd =+ 10;
+        addAfterMove = true;
+    }
+
+    private void removeFromMouses(int line, int col) {
+        --mousesCount;
+        for (int i = 0; i <mouses.size() ; i++) {
+            if(mouses.get(i).getCol()==col && mouses.get(i).getLine()==line)
+                mouses.remove(i);
+
         }
     }
 
@@ -171,8 +207,10 @@ public class Level {
                     snakeHead.setCord(getHeight()-1, colSnake);
 
                 }else{
-                    if(board[lineSnake-1][colSnake] instanceof AppleCell){
-                        updateRoutineAfterScore();
+                    if(getCell(lineSnake-1,colSnake) instanceof AppleCell){
+                        updateRoutineAfterApple();
+                    }else if(getCell(lineSnake-1,colSnake) instanceof MouseCell){
+                        updateRoutineAfterMouse(lineSnake-1,colSnake);
                     }
                     update.cellMoved(lineSnake, colSnake, lineSnake - 1, colSnake, snakeHead);
                     putCell(lineSnake - 1, colSnake, snakeHead);
@@ -184,9 +222,11 @@ public class Level {
                     putCell(0, colSnake, snakeHead);
                     snakeHead.setCord(0, colSnake);
                 }else {
-                    if (board[lineSnake + 1][colSnake] instanceof AppleCell) {
-                        updateRoutineAfterScore();
-                    }
+                    if (getCell(lineSnake+1,colSnake) instanceof AppleCell) {
+                        updateRoutineAfterApple();
+                    }else if(getCell(lineSnake+1,colSnake) instanceof MouseCell)
+                        updateRoutineAfterMouse(lineSnake+1,colSnake);
+
                     update.cellMoved(lineSnake, colSnake, lineSnake + 1, colSnake, snakeHead);
                     putCell(lineSnake + 1, colSnake, snakeHead);
                     snakeHead.setCord(lineSnake + 1, colSnake);
@@ -197,9 +237,10 @@ public class Level {
                     putCell(lineSnake, getWidth()-1, snakeHead);
                     snakeHead.setCord(lineSnake, getWidth()-1);
                 }else {
-                    if (board[lineSnake][colSnake - 1] instanceof AppleCell) {
-                        updateRoutineAfterScore();
-                    }
+                    if (getCell(lineSnake,colSnake - 1) instanceof AppleCell) {
+                        updateRoutineAfterApple();
+                    }else if(getCell(lineSnake,colSnake - 1) instanceof MouseCell)
+                        updateRoutineAfterMouse(lineSnake,colSnake - 1);
 
                 update.cellMoved(lineSnake, colSnake, lineSnake, colSnake - 1, snakeHead);
                 putCell(lineSnake, colSnake - 1, snakeHead);
@@ -211,9 +252,11 @@ public class Level {
                     putCell(lineSnake, 0, snakeHead);
                     snakeHead.setCord(lineSnake, 0);
                 } else {
-                    if (board[lineSnake][colSnake + 1] instanceof AppleCell) {
-                        updateRoutineAfterScore();
-                    }
+                    if (getCell(lineSnake,colSnake + 1) instanceof AppleCell) {
+                        updateRoutineAfterApple();
+                    }else if(getCell(lineSnake,colSnake + 1) instanceof MouseCell)
+                        updateRoutineAfterMouse(lineSnake,colSnake + 1);
+
                     update.cellMoved(lineSnake, colSnake, lineSnake, colSnake + 1, snakeHead);
                     putCell(lineSnake, colSnake + 1, snakeHead);
                     snakeHead.setCord(lineSnake, colSnake + 1);
@@ -229,7 +272,6 @@ public class Level {
             }
 
     }
-
 
     private boolean safeToMove(int currentSnakeHeadLine, int currentSnakeHeadCol, Dir dir) {
         if (dir == UP) {
@@ -256,7 +298,7 @@ public class Level {
         return true;
     }
 
-    private void findHead() {
+    private void initSnakeHeadCoordinates() {
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 if (getCell(i, j) instanceof SnakeHeadCell) {
@@ -268,11 +310,6 @@ public class Level {
                 }
             }
         }
-    }
-
-    void putCell(int l, int c, Cell cell) {
-        if (cell instanceof AppleCell) ++initialAppleCount;
-        board[l][c] = cell;
     }
 
     private void deadSnake(int currentSnakeHeadLine, int currentSnakeHeadCol) {
@@ -290,7 +327,6 @@ public class Level {
         int lin, col, lastLine, lastCol;
         lin = lineSnake;
         col = colSnake;
-        // QUE MERDA ERA AQUELA QUE ESTAVA AQUI ?? ESTUDA FDS !
         for (int i = 1; i < snake.size(); i++) {
             lastLine = snake.get(i).getLine();
             lastCol = snake.get(i).getCol();
@@ -315,6 +351,7 @@ public class Level {
             }
         }
     }
+
     private void losesSection() {
         double test=(double)(stepCounter-lastScoreStepCounter)/10;
         if(test%1==0&&test!=0){
@@ -328,13 +365,13 @@ public class Level {
 
     }
 
-    private void updateRoutineAfterScore() {
-        if(remApples> initialAppleCount)genNewApple();
-        lastScoreStepCounter=stepCounter;
-        updateNumbers();
-        addAfterMove=true;
-    }
-
+    private void updateRoutineAfterApple() {
+            if (remApples > initialAppleCount) genNewApple();
+            lastScoreStepCounter = stepCounter;
+            updateNumbers();
+            sectionsToAdd += 4;
+            addAfterMove = true;
+        }
 
     private void genNewApple() {
             int l1 = (int) Math.floor(Math.random() * (getHeight()));
@@ -353,6 +390,9 @@ public class Level {
     private boolean isEmpty(int line, int col) {
         return board[line][col]instanceof EmptyCell;
     }
+    private boolean isEmpty(Cell cell){
+        return cell instanceof EmptyCell;
+    }
 
 
     private void updateNumbers() {
@@ -362,7 +402,68 @@ public class Level {
         currentGame.setScore(score);
     }
 
+    private void mousesMove() {
+        if (!mousesAllDead()) {
+            double test = (double) stepCounter / 4;
+            if (test % 1 == 0 && test != 0) {
+                genNewMousePosition();
+            }
+        }
+    }
+
+    private boolean mousesAllDead() {
+        return mousesCount==0;
+    }
+    private void genNewMousePosition() {
+        for (int i = 0; i <mouses.size(); i++) {
+            mouseLine = mouses.get(i).getLine();
+            mouseCol = mouses.get(i).getCol();
+
+            int newPos = (int) (Math.random() * 4) +1;
+        setMouseDirection(newPos);
+        if (checkTargetLimits()) target = getCell(targetLine,targetCol);
+
+        while (!isEmpty(target)||target instanceof ObstacleCell
+                ||target instanceof SnakeBodyCell||target instanceof AppleCell ) {
+
+            newPos = (int) (Math.random() * 4) +1;
+            setMouseDirection(newPos);
+            if (checkTargetLimits()) target = getCell(targetLine,targetCol);
+
+        }
+        mouses.get(i).setCord(targetLine,targetCol);
+        update.cellMoved(mouseLine, mouseCol,targetLine,targetCol,mouses.get(i));
+        board[mouseLine][mouseCol] = new EmptyCell();
+        board[targetLine][targetCol] = mouses.get(i);
+        }
+    }
+    private boolean checkTargetLimits() {
+        return ((targetLine>=0 && targetLine<getHeight()-1)||(targetCol>=0 && targetCol<getWidth()-1));
+    }
+
+    private void setMouseDirection(int newPos) {
+        if(newPos==1) {
+            mouseDirection = LEFT;
+            targetLine= mouseLine;
+            targetCol= mouseCol -1;
+        }else if(newPos==2){
+            mouseDirection=UP;
+            targetLine= mouseLine -1;
+            targetCol= mouseCol;
+        }else if(newPos==3){
+            mouseDirection=RIGHT;
+            targetLine= mouseLine;
+            targetCol= mouseCol +1;
+            }
+        else{
+            mouseDirection=DOWN;
+            targetLine= mouseLine +1;
+            targetCol= mouseCol;
+        }
+    }
+
     public interface Observer {
+
 
         // Level.Listener
         void cellUpdated(int l, int c, Cell cell);
